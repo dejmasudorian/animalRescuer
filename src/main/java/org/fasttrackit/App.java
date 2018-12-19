@@ -12,11 +12,17 @@ public class App
         Animal pet = new Animal();
         pet.name = "Pufu";
         pet.age = 13;
+        System.out.println(pet.health[7]);
         pet.fav_food = "carne de pui";
         Recess recess = new Recess();
         recess.name = "alergatul";
 
         Animalfood animalfood = new Animalfood();
+
+        Animalfood date = new Animalfood();
+        String str = String.format("Data expirarii mancarii pentru animale", date );
+        System.out.printf(str);
+
         animalfood.name = "Eukanuba";
         animalfood.price = 160.5;
         animalfood.quantity = 12;
