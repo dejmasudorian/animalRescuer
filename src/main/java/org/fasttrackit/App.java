@@ -1,10 +1,10 @@
 package org.fasttrackit;
 
 
-public class App 
-{
-    public static void main( String[] args )
-    {
+import java.time.LocalDateTime;
+
+public class App {
+    public static void main(String[] args) {
         AdoptingPerson owner = new AdoptingPerson();
         owner.name = "Teodor";
         owner.payment = 201.5;
@@ -14,14 +14,17 @@ public class App
         pet.age = 13;
         System.out.println(pet.health[7]);
         pet.fav_food = "carne de pui";
+
         Recess recess = new Recess();
         recess.name = "alergatul";
 
         Animalfood animalfood = new Animalfood();
 
         Animalfood date = new Animalfood();
-        String str = String.format("Data expirarii mancarii pentru animale", date );
+        String str = String.format("Data expirarii mancarii pentru animale", date);
         System.out.printf(str);
+
+        animalfood.expiryDate = LocalDateTime.now();
 
         animalfood.name = "Eukanuba";
         animalfood.price = 160.5;
