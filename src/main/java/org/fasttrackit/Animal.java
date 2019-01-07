@@ -8,8 +8,6 @@ public class Animal {
     String fav_food;
     Recess recess;
 
-    /**4 Optional*/
-    String race;
     String color;
     boolean trained;
     boolean compatibility;
