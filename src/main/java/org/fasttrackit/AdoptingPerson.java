@@ -11,9 +11,19 @@ public class AdoptingPerson {
 
 
     public AdoptingPerson(String name, double payment){
-        this.name = name.trim();
+        this.name = name;
         this.payment = payment;
         System.out.println("Custom constuctor invoked for the Adopting Person " + name + " and his payment acquisition of : " + payment);
+    }
+
+
+    public void feeding(Animal animalname, Animalfood foodname){
+        System.out.println(getName() + " just gave some " + foodname.getName() + " food to " + animalname.getName() + ".");
+    }
+
+    public void recesstime(Animal animalname, Recess activity)
+    {
+        System.out.println(getName() + " just practiced " + activity.getName() + " with " + animalname.getName() + ".");
     }
 
     public String getName() {

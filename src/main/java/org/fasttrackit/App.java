@@ -55,5 +55,17 @@ public class App {
         System.out.println(vet.getName());
         System.out.println(vet.getSpecialty());
 
+
+
+
+        owner.setName("John");
+        animalfood.setName("Purina");
+        pet1.setName("Chaika");
+        owner.feeding(pet1, animalfood);
+
+        owner.setName("Michael");
+        recess.setName("fetching");
+        pet1.setName("Oslo");
+        owner.recesstime(pet1, recess);
     }
 }
