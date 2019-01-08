@@ -9,6 +9,54 @@ public class AdoptingPerson {
     int pethouse;
     boolean ensurance;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPayment() {
+        return payment;
+    }
+
+    public void setPayment(double payment) {
+        this.payment = payment;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
+    public double getFinance() {
+        return finance;
+    }
+
+    public void setFinance(double finance) {
+        this.finance = finance;
+    }
+
+    public int getPethouse() {
+        return pethouse;
+    }
+
+    public void setPethouse(int pethouse) {
+        this.pethouse = pethouse;
+    }
+
+    public boolean isEnsurance() {
+        return ensurance;
+    }
+
+    public void setEnsurance(boolean ensurance) {
+        this.ensurance = ensurance;
+    }
+
     public AdoptingPerson(String name, double payment){
         this.name = name;
         this.payment = payment;
