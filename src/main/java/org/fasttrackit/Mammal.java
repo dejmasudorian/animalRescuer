@@ -4,6 +4,13 @@ public class Mammal extends Animal {
     String race;
     boolean collar;
 
+
+    public Mammal(String name, String race) {
+        super(name);
+        this.race = race;
+        System.out.println("Custom constructor invoked for the mammel pets. ");
+    }
+
     public String getRace() {
         return race;
     }
@@ -18,11 +25,5 @@ public class Mammal extends Animal {
 
     public void setCollar(boolean collar) {
         this.collar = collar;
-    }
-
-    public Mammal(String name, String race) {
-        super(name);
-        this.race = race;
-        System.out.println("Custom constructor invoked for the mammel pets. ");
     }
 }

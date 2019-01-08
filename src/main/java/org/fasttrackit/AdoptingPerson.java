@@ -9,12 +9,19 @@ public class AdoptingPerson {
     int pethouse;
     boolean ensurance;
 
+
+    public AdoptingPerson(String name, double payment){
+        this.name = name.trim();
+        this.payment = payment;
+        System.out.println("Custom constuctor invoked for the Adopting Person " + name + " and his payment acquisition of : " + payment);
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name.trim();
     }
 
     public double getPayment() {
@@ -55,11 +62,5 @@ public class AdoptingPerson {
 
     public void setEnsurance(boolean ensurance) {
         this.ensurance = ensurance;
-    }
-
-    public AdoptingPerson(String name, double payment){
-        this.name = name;
-        this.payment = payment;
-        System.out.println("Custom constuctor invoked for the Adopting Person " + name + " and his payment acquisition of : " + payment);
     }
 }

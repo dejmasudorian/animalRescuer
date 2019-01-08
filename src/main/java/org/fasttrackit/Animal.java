@@ -12,6 +12,14 @@ public class Animal {
     boolean trained;
     boolean compatibility;
 
+
+
+    public Animal(String name) {
+        this.name = name;
+        System.out.println("Custom constructor invoked for the animal's name");
+    }
+
+
     public String getName() {
         return name;
     }
@@ -82,10 +90,5 @@ public class Animal {
 
     public void setCompatibility(boolean compatibility) {
         this.compatibility = compatibility;
-    }
-
-    public Animal(String name) {
-        this.name = name;
-        System.out.println("Custom constructor invoked for the animal's name");
     }
 }
