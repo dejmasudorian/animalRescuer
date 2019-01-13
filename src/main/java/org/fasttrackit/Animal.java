@@ -13,6 +13,14 @@ public class Animal {
     boolean compatibility;
 
 
+    public void spiritstate( int spiritindex ) {
+        if(spirit[spiritindex]>=8)
+                System.out.println(getName() + " is in a very good mood at " + spirit[spiritindex] + " level spirit.");
+            else if (spirit[spiritindex]>=5 && spirit[spiritindex]<8) System.out.println(getName() + " is in a decent mood at " + spirit[spiritindex] + " level spirit, but could use improving.");
+            else if (spirit[spiritindex]<5) System.out.println(getName() + "needs more of his master's attention and care more often");
+
+
+    }
 
     public Animal(String name) {
         this.name = name;

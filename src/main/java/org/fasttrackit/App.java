@@ -67,5 +67,14 @@ public class App {
         recess.setName("fetching");
         pet1.setName("Oslo");
         owner.recesstime(pet1, recess);
+
+        Animal dog = new Mammal("Rex","dog");
+        Animal cat = new Mammal("Lisa", "cat");
+        dog.spiritstate(9);
+        cat.spiritstate(6);
+        Animal bird = new Birds("Jaco","bird");
+        bird.spiritstate(3);
+
+
     }
 }
