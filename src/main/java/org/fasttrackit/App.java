@@ -68,8 +68,8 @@ public class App {
         owner.setName("John");
         animalfood.setName("Purina");
         pet1.setName("Chaika");
-        // Insert hungerIndex for position in Health Array
-        owner.feeding(pet1, animalfood,8);
+        // Insert hapinessIndex and hungerIndex for position in Health Array
+        owner.feeding(pet1, animalfood,7, 5);
 
         owner.setName("Michael");
         recess.setName("fetching");

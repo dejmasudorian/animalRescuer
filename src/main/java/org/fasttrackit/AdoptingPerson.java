@@ -16,19 +16,38 @@ public class AdoptingPerson {
     }
 
 
-    public void feeding(Animal animalname, Animalfood foodname, int hungerIndex){
+    public void feeding(Animal animalname, Animalfood foodname, int happinessIndex, int hungerIndex){
+        System.out.println("FEEDING:");
         System.out.println(getName() + " just gave some " + foodname.getName() + " food to " + animalname.getName() + ".");
         int hungerLevel = animalname.health[hungerIndex];
+
         hungerLevel--;
         System.out.println("Hunger level has downgraded from " + animalname.health[hungerIndex] + "to" + hungerLevel);
+
+        String favoriteFoodName = " Purina ";
+        int happinessLevel = animalname.spirit[happinessIndex];
+        if (foodname.getName() == favoriteFoodName)
+            happinessLevel++;
+        System.out.println("After feeding " + animalname.getName() + " with " + favoriteFoodName + " , its happiness level improved to " + happinessLevel);
+
     }
 
-    public void entertain(Animal animalname, Recess activity, int happniessIndex)
+    public void entertain(Animal animalname, Recess activity, int happinessIndex)
     {
+        System.out.println("ETERTAIN:");
         System.out.println(getName() + " just practiced " + activity.getName() + " with " + animalname.getName() + ".");
-        int happinessLevel = animalname.spirit[happniessIndex];
+        int happinessLevel = animalname.spirit[happinessIndex];
+
         happinessLevel--;
-        System.out.println("Happiness level has downgraded from " + animalname.health[happniessIndex] + "to" + happinessLevel);
+        System.out.println("Happiness level has downgraded from " + animalname.health[happinessIndex] + "to" + happinessLevel);
+
+        String favoriteActivityName = "running";
+        happinessLevel = animalname.spirit[happinessIndex];
+        if ( favoriteActivityName == activity.getName())
+            happinessLevel += 2;
+        else happinessLevel++;
+
+        System.out.println("After doing " + activity.getName() + " with " + animalname.getName() + " , its happiness level improved to " + happinessLevel);
     }
 
     public String getName() {
