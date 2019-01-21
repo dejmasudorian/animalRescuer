@@ -24,7 +24,6 @@ public class Animal {
 
     public Animal(String name) {
         this.name = name;
-        System.out.println("Custom constructor invoked for the animal's name");
     }
 
 

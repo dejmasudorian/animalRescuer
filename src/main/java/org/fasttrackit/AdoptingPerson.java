@@ -13,17 +13,22 @@ public class AdoptingPerson {
     public AdoptingPerson(String name, double payment){
         this.name = name;
         this.payment = payment;
-        System.out.println("Custom constuctor invoked for the Adopting Person " + name + " and his payment acquisition of : " + payment);
     }
 
 
-    public void feeding(Animal animalname, Animalfood foodname){
+    public void feeding(Animal animalname, Animalfood foodname, int hungerIndex){
         System.out.println(getName() + " just gave some " + foodname.getName() + " food to " + animalname.getName() + ".");
+        int hungerLevel = animalname.health[hungerIndex];
+        hungerLevel--;
+        System.out.println("Hunger level has downgraded from " + animalname.health[hungerIndex] + "to" + hungerLevel);
     }
 
-    public void recesstime(Animal animalname, Recess activity)
+    public void entertain(Animal animalname, Recess activity, int happniessIndex)
     {
         System.out.println(getName() + " just practiced " + activity.getName() + " with " + animalname.getName() + ".");
+        int happinessLevel = animalname.spirit[happniessIndex];
+        happinessLevel--;
+        System.out.println("Happiness level has downgraded from " + animalname.health[happniessIndex] + "to" + happinessLevel);
     }
 
     public String getName() {

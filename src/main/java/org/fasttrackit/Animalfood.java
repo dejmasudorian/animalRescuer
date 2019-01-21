@@ -16,7 +16,6 @@ public class Animalfood {
         this.price = price;
         this.quantity = quantity;
 
-        System.out.println("Custom constructor invoked for the animal food's : name, price and quantity");
     }
 
 

@@ -8,7 +8,6 @@ public class Mammal extends Animal {
     public Mammal(String name, String race) {
         super(name);
         this.race = race;
-        System.out.println("Custom constructor invoked for the mammel pets. ");
     }
 
     @Override
@@ -19,7 +18,7 @@ public class Mammal extends Animal {
         if (race== "dog")
         raceaction = " fiddles tail ";
         if(spirit[spiritindex]>=8)
-                System.out.println( getRace() + raceaction + "at " + spirit[spiritindex]);
+                System.out.println( getName() + raceaction + "at " + spirit[spiritindex]);
             else if (spirit[spiritindex]>=5 && spirit[spiritindex]<8) System.out.println(getName() + " is in a decent mood at " + spirit[spiritindex] + " level spirit, but could use improving.");
             else if (spirit[spiritindex]<5) System.out.println(getName() + " needs more of his master's attention and care more often");
         }

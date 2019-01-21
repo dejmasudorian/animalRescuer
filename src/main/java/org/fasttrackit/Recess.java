@@ -7,7 +7,6 @@ public class Recess {
 
     public Recess(String name) {
         this.name = name;
-        System.out.println("Custom constructor invoked for the recess activity name ");
     }
 
     public String getName() {

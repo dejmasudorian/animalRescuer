@@ -7,7 +7,6 @@ public class Vet {
 
     public Vet(String name) {
         this.name = name;
-        System.out.println("Custom constructor invoked for the veterinar's name");
     }
 
 

@@ -57,23 +57,25 @@ public class App {
 
 
 
-
-        owner.setName("John");
-        animalfood.setName("Purina");
-        pet1.setName("Chaika");
-        owner.feeding(pet1, animalfood);
-
-        owner.setName("Michael");
-        recess.setName("fetching");
-        pet1.setName("Oslo");
-        owner.recesstime(pet1, recess);
-
         Animal dog = new Mammal("Rex","dog");
         Animal cat = new Mammal("Lisa", "cat");
         dog.spiritstate(9);
         cat.spiritstate(6);
         Animal bird = new Birds("Jaco","bird");
         bird.spiritstate(3);
+
+
+        owner.setName("John");
+        animalfood.setName("Purina");
+        pet1.setName("Chaika");
+        // Insert hungerIndex for position in Health Array
+        owner.feeding(pet1, animalfood,8);
+
+        owner.setName("Michael");
+        recess.setName("fetching");
+        pet1.setName("Oslo");
+        //Insert hapinessIndex for position in Spirit Array
+        owner.entertain(pet1, recess,6);
 
 
     }
