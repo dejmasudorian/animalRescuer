@@ -11,13 +11,12 @@ public class Animalfood {
 
 
 
-    public Animalfood(String name, double price, double qunatity) {
+  public Animalfood(String name, double price, double quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
 
     }
-
 
 
     public String getName() {

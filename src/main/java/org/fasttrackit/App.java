@@ -77,6 +77,9 @@ public class App {
         //Insert hapinessIndex for position in Spirit Array
         owner.entertain(pet1, recess,6);
 
+        System.out.println();
 
+        Game game = new Game();
+        game.start();
     }
 }
