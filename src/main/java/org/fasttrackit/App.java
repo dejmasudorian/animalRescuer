@@ -3,7 +3,7 @@ package org.fasttrackit;
 import java.time.LocalDateTime;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         AdoptingPerson owner = new AdoptingPerson("Theodor", 201.5);
         owner.setName("Theodor");
         owner.setPayment(201.5);
