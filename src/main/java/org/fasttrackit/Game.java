@@ -170,16 +170,16 @@ public class Game {
     }
 
     private  void insertBirds(int indexHealth, int indexSpirit) throws Exception {
-        Animal animal = new Birds(nameAnimal(),getRaceOfAnimalFromUser());
-        animal.setAge(3);
-        animal.setFav_food("seeds");
-        ((Birds) animal).setBirdcage(true);
-        System.out.println("Its health condition is: " + animal.health[indexHealth-1]);
-        System.out.println("Its spirit condition is: " + animal.spirit[indexSpirit-1]);
-        System.out.println("Your pet bird's name is: " + animal.getName());
-        System.out.println("Its race is: " + ((Mammal) animal).getRace());
-        System.out.println("Its age is: " + animal.getAge());
-        System.out.println("Its favorite food is : " + animal.getFav_food());
+        Animal bird = new Birds(nameAnimal(),getRaceOfAnimalFromUser());
+        bird.setAge(3);
+        bird.setFav_food("seeds");
+        ((Birds) bird).setBirdcage(true);
+        System.out.println("Your pet bird's name is: " + bird.getName());
+        System.out.println("Its race is: " + ((Birds) bird).getRace());
+        System.out.println("Its health condition is: " + bird.health[indexHealth-1]);
+        System.out.println("Its spirit condition is: " + bird.spirit[indexSpirit-1]);
+        System.out.println("Its age is: " + bird.getAge());
+        System.out.println("Its favorite food is : " + bird.getFav_food());
 
     }
 
