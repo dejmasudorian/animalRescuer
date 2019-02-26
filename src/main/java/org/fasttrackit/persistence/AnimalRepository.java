@@ -1,6 +1,7 @@
 package org.fasttrackit.persistence;
 
 import org.fasttrackit.Animal;
+import org.fasttrackit.Recess;
 
 import java.io.IOException;
 import java.sql.*;
@@ -26,7 +27,7 @@ public class AnimalRepository {
 
     public List<Animal> getAnimalTable() throws SQLException, IOException, ClassNotFoundException {
         Connection connection = DatabaseConfiguration.getConnection();
-        String query = "SELECT `name`, age, health, spirit, `fav_food`, `recess` FROM animal_table ORDER BY spirit ASC;";
+        String query = "SELECT * FROM animal_table;";
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
 
@@ -39,8 +40,10 @@ public class AnimalRepository {
             animalTable.setAge(resultSet.getInt("age"));
             animalTable.setTableHealth(resultSet.getInt("health"));
             animalTable.setTableSpirit(resultSet.getInt("spirit"));
-            animalTable.setFav_food(resultSet.getString("favorite food"));
-            animalTable.getRecess().setName(resultSet.getString("recess activity"));
+            animalTable.setFav_food(resultSet.getString("fav_food"));
+            Recess recess = new Recess();
+            animalTable.setRecess(recess);
+            animalTable.getRecess().setName(resultSet.getString("recess"));
 
             response.add(animalTable);
 

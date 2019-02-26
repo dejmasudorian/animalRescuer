@@ -32,10 +32,6 @@ public class Animal {
     String fav_food;
     Recess recess;
 
-    String color;
-    boolean trained;
-    boolean compatibility;
-
 
     public void spiritstate(int spiritindex ) {
         if(spirit[spiritindex]>=8)
@@ -124,30 +120,6 @@ public class Animal {
         this.recess = recess;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public boolean isTrained() {
-        return trained;
-    }
-
-    public void setTrained(boolean trained) {
-        this.trained = trained;
-    }
-
-    public boolean isCompatibility() {
-        return compatibility;
-    }
-
-    public void setCompatibility(boolean compatibility) {
-        this.compatibility = compatibility;
-    }
-
     public long getId() {
         return id;
     }
@@ -170,9 +142,6 @@ public class Animal {
                 ", spirit=" + Arrays.toString(spirit) +
                 ", fav_food='" + fav_food + '\'' +
                 ", recess=" + recess +
-                ", color='" + color + '\'' +
-                ", trained=" + trained +
-                ", compatibility=" + compatibility +
                 '}';
     }
 }

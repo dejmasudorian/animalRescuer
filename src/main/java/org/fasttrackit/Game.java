@@ -31,11 +31,9 @@ public class Game {
 
         System.out.println();
 
-        animal = initAnimal();
+        this.animal = initAnimal();
 
-        System.out.println();
-
-        insertAnimalTable(animal.getName());
+        insertAnimalTable(this.animal.getName());
 
         System.out.println();
 
@@ -45,11 +43,11 @@ public class Game {
 
         initActivities();
 
-        requireActivity(animal);
+        requireActivity(this.animal);
 
         System.out.println();
 
-        requireFeeding(animal);
+        requireFeeding(this.animal);
         //displayFood();
         //System.out.println();
         //displayActivities1();
@@ -63,8 +61,8 @@ public class Game {
         int roundCount = getRoundCountFromUser();
         System.out.println();
         int roundsplayed = 1;
-        int hungerLevel = animal.getTableHealth();
-        int hapinessLevel = animal.getTableSpirit();
+        int hungerLevel = this.animal.getTableHealth();
+        int hapinessLevel = this.animal.getTableSpirit();
         System.out.println("Your pet starts the game at:" );
         System.out.println("Hunger Level: " + hungerLevel);
         System.out.println("Hapiness Level: " + hapinessLevel);
@@ -85,7 +83,7 @@ public class Game {
                 break;
             }
             System.out.println("It's time to play!");
-            requireActivity(animal);
+            requireActivity(this.animal);
             System.out.println();
             System.out.println("After spending time with your pet, the stats have changed:");
             hapinessLevel++;
@@ -99,23 +97,20 @@ public class Game {
             if (hungerLevel>=6 && hungerLevel<=9)
             {
                 System.out.println("You need to feed your pet before it collapses of hunger.");
-                requireFeeding(animal);
+                requireFeeding(this.animal);
                 hungerLevel -= 2;
 
-                animal.setName(animal.getName());
                 animal.setTableHealth(hungerLevel);
                 animal.setTableSpirit(hapinessLevel);
-                animal.setFav_food(animal.getFav_food());
-                animal.recess.setName(animal.recess.getName());
-                animalService.updateAnimal(animal);
+                animalService.updateAnimal(this.animal);
             }
 
             roundsplayed++;
 
             if(roundCount == roundsplayed) {
                 System.out.println("YOUR PET HAS WON THE GAME!");
-                animal.setTableHealth(hungerLevel);
-                animal.setTableSpirit(hapinessLevel);
+                this.animal.setTableHealth(hungerLevel);
+                this.animal.setTableSpirit(hapinessLevel);
             }
 
         }
@@ -134,7 +129,7 @@ public class Game {
     }
 
     public Animal createAnimalInTable() throws Exception {
-        Animal animal = new Animal(stringForTable());
+        Animal animal = new Animal();
         System.out.println("Type the name of the animal: ");
         String name = stringForTable();
         animal.setName(name);
@@ -156,8 +151,8 @@ public class Game {
         animal.setFav_food(name1);
 
         System.out.println("Type the name of the recess for the animal: ");
-        String name2 = stringForTable();
-        animal.recess.setName(name2);
+        Recess recess = new Recess(stringForTable());
+        animal.setRecess(recess);
 
         return animal;
     }
@@ -185,7 +180,7 @@ public class Game {
             if (availablefood.get(i) != null) {
                 if (numberFood == i) {
                     System.out.println("You have fed your pet some " + availablefood.get(i).getName());
-                    animal.setFav_food(availablefood.get(i).getName());
+                    animal.setFav_food( availablefood.get(i).getName());
                 }
             }
     }
@@ -199,7 +194,7 @@ public class Game {
             if (availableActivities[i] != null) {
                 if (numberActivity == i) {
                     System.out.println("You have practiced with your pet --> " + availableActivities[i].getName());
-                    animal.recess.setName(availableActivities[i].getName());
+                    animal.getRecess().setName(availableActivities[i].getName());
                 }
             }
     }
@@ -243,14 +238,36 @@ public class Game {
     }
 
     private Animal insertBirds() throws Exception {
-        Animal bird = createAnimalInTable();
+        Animal bird = new Birds(nameAnimal(),getRaceOfAnimalFromUser());
+        bird.setAge(3);
+        bird.setFav_food("seeds");
+        ((Birds) bird).setBirdcage(true);
+        bird.setTableHealth(getHealthFromUser());
+        bird.setTableSpirit(getSpiritFromUser());
+        System.out.println("Your pet bird's name is: " + bird.getName());
+        System.out.println("Its race is: " + ((Birds) bird).getRace());
+        System.out.println("Its health condition is: " + bird.getTableHealth());
+        System.out.println("Its spirit condition is: " + bird.getTableSpirit());
+        System.out.println("Its age is: " + bird.getAge());
+        System.out.println("Its favorite food is : " + bird.getFav_food());
         return bird;
 
     }
 
     private Animal insertMammal() throws Exception {
-        Animal mammal = createAnimalInTable();
-        return mammal;
+        Animal animal = new Mammal(nameAnimal(),getRaceOfAnimalFromUser());
+        animal.setAge(4);
+        animal.setFav_food("Meat");
+        ((Mammal) animal).setCollar(true);
+        animal.setTableHealth(getHealthFromUser());
+        animal.setTableSpirit(getSpiritFromUser());
+        System.out.println("Your animal mammal's name is: " + animal.getName());
+        System.out.println("Its race is: " + ((Mammal) animal).getRace());
+        System.out.println("Its age is: " + animal.getAge());
+        System.out.println("Its favorite food is : " + animal.getFav_food());
+        System.out.println("Its health condition is: " + animal.getTableHealth());
+        System.out.println("Its spirit condition is: " + animal.getTableSpirit());
+        return animal;
     }
 
 
