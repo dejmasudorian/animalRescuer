@@ -98,7 +98,8 @@ public class Game {
                 hapinessLevel = 10;
             System.out.println("HUNGER: " + hungerLevel);
             System.out.println("HAPINESS: " + hapinessLevel);
-            if (hungerLevel>=6 && hungerLevel<=9){
+            if (hungerLevel>=6 && hungerLevel<=9)
+            {
                 System.out.println("You need to feed your pet before it collapses of hunger.");
                 requireFeeding(animal);
                 hungerLevel -= 2;
