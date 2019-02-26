@@ -4,6 +4,10 @@ public class Birds extends Animal {
     String race;
     boolean birdcage;
 
+    public Birds() {
+
+    }
+
 
     @Override
     public void spiritstate(int spiritindex) {

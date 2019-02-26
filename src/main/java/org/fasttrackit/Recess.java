@@ -9,6 +9,10 @@ public class Recess {
         this.name = name;
     }
 
+    public Recess() {
+
+    }
+
     public String getName() {
         return name;
     }

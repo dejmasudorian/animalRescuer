@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        AdoptingPerson owner = new AdoptingPerson("Theodor", 201.5);
+       /* AdoptingPerson owner = new AdoptingPerson("Theodor", 201.5);
         owner.setName("Theodor");
         owner.setPayment(201.5);
         owner.setAdress("XYZ Street");
@@ -77,7 +77,7 @@ public class App {
         //Insert hapinessIndex for position in Spirit Array
         owner.entertain(pet1, recess,6);
 
-        System.out.println();
+        System.out.println();*/
 
         Game game = new Game();
         game.start();
