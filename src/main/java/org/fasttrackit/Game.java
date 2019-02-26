@@ -2,8 +2,6 @@ package org.fasttrackit;
 
 import org.fasttrackit.service.AnimalService;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -111,7 +109,6 @@ public class Game {
                 animal.recess.setName(animal.recess.getName());
                 animalService.updateAnimal(animal);
             }
-
             roundsplayed++;
 
             if(roundCount == roundsplayed) {
