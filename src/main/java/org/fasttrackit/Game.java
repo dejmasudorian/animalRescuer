@@ -109,6 +109,7 @@ public class Game {
                 animal.recess.setName(animal.recess.getName());
                 animalService.updateAnimal(animal);
             }
+
             roundsplayed++;
 
             if(roundCount == roundsplayed) {
