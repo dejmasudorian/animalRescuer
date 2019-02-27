@@ -102,15 +102,14 @@ public class Game {
 
                 animal.setTableHealth(hungerLevel);
                 animal.setTableSpirit(hapinessLevel);
-                animalService.updateAnimal(this.animal);
+
             }
 
+            animalService.updateAnimal(this.animal);
             roundsplayed++;
 
             if(roundCount == roundsplayed) {
                 System.out.println("YOUR PET HAS WON THE GAME!");
-                this.animal.setTableHealth(hungerLevel);
-                this.animal.setTableSpirit(hapinessLevel);
             }
 
         }

@@ -13,7 +13,7 @@ public class AnimalRepository {
     public void  createAnimalTable(Animal animalTable) throws SQLException, IOException, ClassNotFoundException {
 
         Connection connection = DatabaseConfiguration.getConnection();
-        String insertSql = "INSERT INTO animal_table (`name`, age, health, spirit, `fav_food`, `recess`) VALUES (?,?,?,?,?,?)";
+        String insertSql = "INSERT INTO animal_table (`name`, age, health, spirit, `fav_food`, `recess`) VALUES (?,?,?,?,?,?);";
         PreparedStatement preparedStatement = connection.prepareStatement(insertSql);
         preparedStatement.setString(1,animalTable.getName());
         preparedStatement.setInt(2, animalTable.getAge());
@@ -53,8 +53,7 @@ public class AnimalRepository {
 
     public void updateAnimalTable(Animal animalTable) throws SQLException, IOException, ClassNotFoundException {
         Connection connection = DatabaseConfiguration.getConnection();
-        String insertSql = "UPDATE animal_table SET `name` = ? , age = ?, health = ?, spirit = ?, `fav_food`=?, `recess`=?" +
-                "WHERE  id = ?";
+        String insertSql = "UPDATE animal_table SET `name` = ? , age = ?, health = ?, spirit = ?, `fav_food`=?, `recess`=? WHERE id = ?;";
         PreparedStatement preparedStatement = connection.prepareStatement(insertSql);
         preparedStatement.setString(1,animalTable.getName());
         preparedStatement.setInt(2, animalTable.getAge());
